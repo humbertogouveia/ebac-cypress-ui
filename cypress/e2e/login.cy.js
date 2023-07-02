@@ -5,13 +5,13 @@ const perfil = require('../fixtures/perfil.json')
 context('Funcionalidade de Login',()=>{ 
 
 beforeEach(() => {
-    cy.visit("http://lojaebac.ebaconline.art.br/minha-conta")
+    cy.visit('/')
 
 })
 
-// afterEach(() => {
-//     cy.screenshot()
-// })
+afterEach(() => {
+    cy.screenshot()
+})
 
     it('Deve fazer login com sucesso',()=>{
         cy.get('#username').type(perfil.usuario)

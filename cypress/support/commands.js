@@ -6,7 +6,7 @@ Cypress.Commands.add("login", (usuario, senha) => {
     cy.get(".page-title").should("contain", "Minha conta")
     cy.get(".woocommerce-MyAccount-content > :nth-child(2)").should(
       "contain",
-      "Olá, aluno_ebac"
+      "Olá, Aluno"
     )
   })
   
