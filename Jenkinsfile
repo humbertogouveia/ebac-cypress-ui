@@ -1,6 +1,8 @@
 pipeline {
-  agent any,
-  nodejs 'NodeJS'
+  agent any
+  tools {
+    nodejs 'NodeJS'
+  }
 
   stages {
     stage('Clonar o repositório') {
