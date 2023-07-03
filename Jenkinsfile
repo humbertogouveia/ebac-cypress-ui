@@ -3,7 +3,7 @@ agent any
 stages {
 stage ('Clonar o repositorio') {
 steps {
-git branch: 'main', url: 'https://github.com/EBAC-QE/testes-e2e-ebac-shop.git'
+git branch: 'main', url: 'https://github.com/humbertogouveia/ebac-cypress-ui.git'
 }
 }
 stage( 'Instalar dependencias") {
