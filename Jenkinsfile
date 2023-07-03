@@ -1,7 +1,8 @@
 pipeline {
     agent any
     tools {
-        nodejs 'NodeJS'
+        nodejs 'NodeJS',
+        git 'git' 
     }
     stages {
         stage('Instalando dependências') {
