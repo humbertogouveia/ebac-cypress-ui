@@ -1,18 +1,23 @@
 pipeline {
-agent any
-stages {
-stage ('Clonar o repositorio') {
-steps {
-git branch: 'main', url: 'https://github.com/humbertogouveia/ebac-cypress-ui.git'
-}
-}
-stage( 'Instalar dependencias") {
-steps {
-sh 'npm install'
-}
-stage('Executar Testes') {
-steps {
-sh 'npx cypress run'
-}
-}
+  agent any
+
+  stages {
+    stage('Clonar o repositório') {
+      steps {
+        git branch: 'main', url: 'https://github.com/humbertogouveia/ebac-cypress-ui.git'
+      }
+    }
+    
+    stage('Instalar dependências') {
+      steps {
+        sh 'npm install'
+      }
+    }
+    
+    stage('Executar Testes') {
+      steps {
+        sh 'npx cypress run'
+      }
+    }
+  }
 }
