@@ -2,14 +2,14 @@ pipeline {
   agent any
 
   tools {
-   nodejs 'NodeJS'
-   git 'git'
+    nodejs 'NodeJS'
+    git 'git'
   }
 
   stages {
     stage('Clone UI repository') {
       steps {
-        git 'https://github.com/humbertogouveia/ebac-cypress-ui.git'
+        git url: 'https://github.com/humbertogouveia/ebac-cypress-ui.git'
       }
     }
 
@@ -19,7 +19,7 @@ pipeline {
       }
     }
 
-    stage('Rodar testes de interface gráfica') {
+    stage('Run GUI tests') {
       steps {
         sh 'npx cypress run'
       }
